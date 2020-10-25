@@ -1,55 +1,12 @@
-// ADD CARDS
-/*
-$(document).ready(function() {
-    $("button#addIceBox").on("click", function() {
-        $("div.cardContainer1").after(`
-        <div class="newCard" id="test1">
-        <input>
-        </div>
-        <button class="btn-secondary" id="deleteIceBox">
-        delete
-        </button>
-        `);
-    });
-});
-*/
-$(document).ready(function() {
-    $("button#addToDo").on("click", function() {
-        $("div.cardContainer2").after(`
-        <div class="newCard">
-        <input>
-        </div>
-        `);
-    });
-});
-
-$(document).ready(function() {
-    $("button#addDoing").on("click", function() {
-        $("div.cardContainer3").after(`
-        <div class="newCard">
-        <input>
-        </div>
-        `);
-    });
-});
-
-$(document).ready(function() {
-    $("button#addDone").on("click", function() {
-        $("div.cardContainer4").after(`
-        <div class="newCard">
-        <input>
-        </div>
-        `);
-    });
-});
-
 /************************ ADD/REMOVE CARDS **************************/
 
+// Ice Box
+
 $(document).ready(function() {
-    var max_fields = 10; //Maximum allowed input fields 
-    var wrapper = $(".cardContainer1"); //Input fields wrapper
-    var add_button = $(".add_fields"); //Add button class or ID
-    var x = 1; //Initial input field is set to 1
+    let max_fields = 1000; //Maximum allowed input fields 
+    let wrapper = $(".cardContainer1"); //Input fields wrapper
+    let add_button = $("#addIceBox"); //Add button class or ID
+    let x = 1; //Initial input field is set to 1
 
     //When user click on add input button
     $(add_button).click(function(e) {
@@ -58,7 +15,88 @@ $(document).ready(function() {
         if (x < max_fields) {
             x++; //input field increment
             //add input field
-            $(wrapper).append('<div><textarea class="newCard" type="text" name="input_array_name[]" placeholder="Input Text Here"></textarea> <button class="btn remove_field"><i class="fas fa-trash"></i></button></div>');
+            $(wrapper).append('<div><textarea class="newCard" type="text" name="input_array_name[]" placeholder=""></textarea> <button class="btn remove_field"><i class="fas fa-trash"></i></button></div>');
+        }
+    });
+
+    //when user click on remove button
+    $(wrapper).on("click", ".remove_field", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //remove inout field
+        x--; //inout field decrement
+    })
+});
+
+// To Do
+
+$(document).ready(function() {
+    let max_fields = 1000; //Maximum allowed input fields 
+    let wrapper = $(".cardContainer2"); //Input fields wrapper
+    let add_button = $("#addToDo"); //Add button class or ID
+    let x = 1; //Initial input field is set to 1
+
+    //When user click on add input button
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        //Check maximum allowed input fields
+        if (x < max_fields) {
+            x++; //input field increment
+            //add input field
+            $(wrapper).append('<div><textarea class="newCard" type="text" name="input_array_name[]" placeholder=""></textarea> <button class="btn remove_field"><i class="fas fa-trash"></i></button></div>');
+        }
+    });
+
+    //when user click on remove button
+    $(wrapper).on("click", ".remove_field", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //remove inout field
+        x--; //inout field decrement
+    })
+});
+
+// Doing
+
+$(document).ready(function() {
+    let max_fields = 1000; //Maximum allowed input fields 
+    let wrapper = $(".cardContainer3"); //Input fields wrapper
+    let add_button = $("#addDoing"); //Add button class or ID
+    let x = 1; //Initial input field is set to 1
+
+    //When user click on add input button
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        //Check maximum allowed input fields
+        if (x < max_fields) {
+            x++; //input field increment
+            //add input field
+            $(wrapper).append('<div><textarea class="newCard" type="text" name="input_array_name[]" placeholder=""></textarea> <button class="btn remove_field"><i class="fas fa-trash"></i></button></div>');
+        }
+    });
+
+    //when user click on remove button
+    $(wrapper).on("click", ".remove_field", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //remove inout field
+        x--; //inout field decrement
+    })
+});
+
+// Done
+
+$(document).ready(function() {
+    let max_fields = 1000; //Maximum allowed input fields 
+    let wrapper = $(".cardContainer4"); //Input fields wrapper
+    let add_button = $("#addDone"); //Add button class or ID
+    let x = 1; //Initial input field is set to 1
+
+    //When user click on add input button
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        //Check maximum allowed input fields
+        if (x < max_fields) {
+            x++; //input field increment
+            //add input field
+            $(wrapper).append('<div><textarea class="newCard" type="text" name="input_array_name[]" placeholder=""></textarea> <button class="btn remove_field"><i class="fas fa-trash"></i></button></div>');
         }
     });
 
