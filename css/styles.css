@@ -122,6 +122,7 @@ textarea {
     height: 30px;
     border-radius: 3px;
     border: 1px solid rgba(102, 102, 102, 0.637);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .fa-trash {
