@@ -107,3 +107,11 @@ $(document).ready(function() {
         x--; //inout field decrement
     })
 });
+
+/******************** SELECT FONT FAMILY ************************/
+
+function updateFontFamily() {
+    let selector = document.getElementById('selectFontFamily');
+    let family = selector.options[selector.selectedIndex].value;
+    Array.from(document.querySelectorAll('textarea'), e => e.style.fontFamily = family);
+};

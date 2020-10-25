@@ -4,10 +4,25 @@
     left: 1rem;
 }
 
-#userBtn {
+h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.userBtn {
     position: absolute;
-    top: 0px;
-    right: 1vw;
+    top: 5px;
+    right: 1rem;
+}
+
+.dropdown-menu a:active {
+    background-color: rgb(40, 167, 69);
+}
+
+#selectFontFamily {
+    position: absolute;
+    top: 5px;
+    right: 7.5rem;
+    width: 300px;
 }
 
 .kanbanRow {
@@ -87,7 +102,7 @@ body {
 /************************************* KANBAN CARDS END *************************************/
 
 
-/************************************ NEW CARDS AND DELETE/EDIT ******************************/
+/***************************************** NEW CARDS ****************************************/
 
 .newCard {
     margin-bottom: 0.5rem;

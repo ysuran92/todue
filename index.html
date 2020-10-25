@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/c902e8622e.js" crossorigin="anonymous"></script>
@@ -17,9 +18,24 @@
             <div>
                 <h2 id="todueTitle">ToDue</h2>
             </div>
-            <div>
-                <p id="userBtn">user</p>
+            <div class="dropdown userBtn">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  User
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
             </div>
+            <select class="form-control" id="selectFontFamily" name="selectFontFamily" onchange="updateFontFamily();">
+                    <option> Serif </option>
+                    <option> Arial </option>
+                    <option> Sans-Serif </option>                                  
+                    <option> Tahoma </option>
+                    <option> Verdana </option>
+                    <option> Lucida Sans Unicode </option>
+            </select>
         </div>
     </div>
     <div class="row kanbanRow">
@@ -27,7 +43,7 @@
             <div class="card wrapper">
                 <h3>Ice Box</h3>
                 <div class="cardContainer1" id="cardContainerIceBox"></div>
-                <button id="addIceBox" type="button" class="btn btn-success add_fields"><i class="material-icons" id="add">add</i></button>
+                <button id="addIceBox" type="button" class="btn btn-success"><i class="material-icons" id="add">add</i></button>
             </div>
         </div>
         <div class="column">
