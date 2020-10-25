@@ -1,7 +1,7 @@
 #todueTitle {
     text-align: center;
-    position: fixed;
-    left: 47.5vw;
+    position: absolute;
+    left: 1rem;
 }
 
 #userBtn {
@@ -85,3 +85,10 @@ body {
 
 
 /************************************* KANBAN CARDS END *************************************/
+
+
+/************************************ NEW CARDS AND DELETE/EDIT ******************************/
+
+.newCard {
+    padding-bottom: 0.5rem;
+}
