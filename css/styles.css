@@ -1,17 +1,42 @@
 #todueTitle {
     text-align: center;
-    position: fixed;
-    left: 47.5vw;
+    position: absolute;
+    left: 1rem;
 }
 
-#userBtn {
+h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.userBtn {
     position: absolute;
-    top: 0px;
-    right: 1vw;
+    top: 5px;
+    right: 1rem;
+}
+
+.dropdown-menu a:active {
+    background-color: rgb(40, 167, 69);
+}
+
+#selectFontFamily {
+    position: absolute;
+    top: 5px;
+    right: 7.5rem;
+    width: 300px;
 }
 
 .kanbanRow {
     padding-top: 15vh;
+}
+
+#add {
+    font-size: 2rem;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn-success {
+    height: 3rem;
 }
 
 
@@ -66,7 +91,7 @@ body {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
+    padding: 1rem;
     margin-right: 1rem;
     margin-left: 1rem;
     text-align: center;
@@ -75,3 +100,33 @@ body {
 
 
 /************************************* KANBAN CARDS END *************************************/
+
+
+/***************************************** NEW CARDS ****************************************/
+
+.newCard {
+    margin-bottom: 0.5rem;
+}
+
+.remove_field {
+    float: left;
+    border: 1px solid black;
+    margin-left: 0.5rem;
+    height: 30px;
+    width: 30px;
+}
+
+textarea {
+    float: left;
+    width: 12.5rem;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 102, 102, 0.637);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fa-trash {
+    transform: translateY(50%);
+    transform: translateX(-35%);
+    vertical-align: top;
+}
